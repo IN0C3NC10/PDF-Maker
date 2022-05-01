@@ -47,7 +47,7 @@
                                     <div class="progress-bar progress-bar-info progress-bar-striped active" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 0%">
                                     </div>
                                 </div>
-                                <form id="wizardForm">
+                                <form id="wizardForm" method="POST" action="controller/CurriculumController.php">
                                     <div class="tab-content">
                                         <div class="tab-pane active fade in" id="tab1">
                                             <div class="row m-b-lg">
@@ -82,7 +82,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="tab-pane fade" id="tab2">
+                                        <!-- <div class="tab-pane fade" id="tab2">
                                             <div class="row">
                                                 <div class="col-md-3">
                                                     <img src="http://via.placeholder.com/250x40" width="250" alt="">
@@ -146,7 +146,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </div> -->
                                         <div class="tab-pane fade" id="tab4">
                                             <h3 style="margin-top:25px;">Thank You!</h3>
                                             <div class="alert alert-success m-t-sm m-b-lg" role="alert">
@@ -156,6 +156,7 @@
                                         <ul class="pager wizard">
                                             <li class="previous"><a href="#" class="btn btn-default">Previous</a></li>
                                             <li class="next"><a href="#" class="btn btn-default">Next</a></li>
+                                            <input type="submit" value="Enviar"/>
                                         </ul>
                                     </div>
                                 </form>
