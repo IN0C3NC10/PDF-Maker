@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+<?php
+$config = parse_ini_file("config.ini");
+?>
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="/assets/images/pdf_logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Build your own PDF just putting your info!">
-    <meta name="keywords" content="pdf, pdf maker, pef-maker">
-    <meta name="author" content="IN0C3NC10">
+    <meta name="description" content="Construa o seu próprio currículo de maneira fácil, apenas preenchendo o formulário com suas informações!">
+    <meta name="keywords" content="pdf, pdf maker, pdf-maker">
+    <meta name="author" content="<?= $config['SITE_AUTHOR'] ?>">
 
     <!-- Title -->
-    <title>PDF Maker</title>
+    <title><?= $config['SITE_NAME'] ?></title>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -30,7 +33,7 @@
     <!-- Page Inner -->
     <div class="page-inner">
         <div class="page-title">
-            <h3 class="breadcrumb-header"><image src="/assets/images/pdf_logo.png" width="40" /> PDF Maker</h3>
+            <h3 class="breadcrumb-header"><image src="/assets/images/pdf_logo.png" width="40" /> <?= $config['SITE_AUTHOR'] ?></h3>
         </div>
         <div id="main-wrapper">
             <div class="row">
@@ -139,7 +142,7 @@
             </div><!-- Row -->
         </div><!-- Main Wrapper -->
         <div class="page-footer">
-            <p>Feito com <i class="fa fa-heart"></i> por IN0C3NC10</p>
+            <p>Feito com <i class="fa fa-heart"></i> por <?= $config['SITE_AUTHOR'] ?></p>
         </div>
     </div><!-- /Page Inner -->
     </div><!-- /Page Content -->

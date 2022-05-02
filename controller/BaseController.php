@@ -60,6 +60,6 @@ function buildPDF($firstName, $lastName, $email, $profile, $company, $startCompa
 
     // define a última página juntamente ao nome do arquivo
     $pdf->lastPage();
-    $pdf->Output('pdf_maker_'.$firstName.'_'.$lastName.'.pdf', 'I');
+    $pdf->Output('PDF_MAKER-'.$firstName.'_'.$lastName.'.pdf', 'I');
 }
 ?>

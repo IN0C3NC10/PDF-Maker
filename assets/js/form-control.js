@@ -37,9 +37,9 @@ $(document).ready(function() {
             var $percent = ($current/$total) * 100;
             $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
             if ($percent == 100){
-                $('#rootwizard').find('.progress-bar').css({background:'#208c09'});
+                $('#rootwizard').find('.progress-bar').css({'background-color':'#208c09'});
             } else {
-                $('#rootwizard').find('.progress-bar').css({background:'#5bc0de'});
+                $('#rootwizard').find('.progress-bar').css({'background-color':'#5bc0de'});
             }
         },
         'onNext': function(tab, navigation, index) {
