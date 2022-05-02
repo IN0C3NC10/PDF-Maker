@@ -14,51 +14,33 @@ $(document).ready(function() {
                 required: true,
                 email: true
 		    },
-		    password: {
+		    personalProfile: {
                 required: true
 		    },
-		    confirmPassword: {
-                required: true,
-                equalTo: '#password'
-		    },
-		    exampleInputProductName: {
+		    companyName: {
                 required: true
 		    },
-		    exampleInputProductId: {
-                required: true
-		    },
-		    exampleInputQuantity: {
+		    companyStartDate: {
                 required: true
             },
-		    exampleInputCard: {
-                required: true,
-                number: true
-		    },
-		    exampleInputSecurity: {
-                required: true,
-                number: true
-		    },
-		    exampleInputHolder: {
+		    companyEndDate: {
                 required: true
-            },
-		    exampleInputExpiration: {
-                required: true,
-                date: true
-            },
-		    exampleInputCsv: {
-                required: true,
-                number: true
-            }
+		    }
         }
     });
  
     $('#rootwizard').bootstrapWizard({
         'tabClass': 'nav nav-tabs',
         onTabShow: function(tab, navigation, index) {
-            var $total = navigation.find('li').length;
-            var $current = index+1;
+            var $total = (navigation.find('li').length) - 1;
+            var $current = index;
             var $percent = ($current/$total) * 100;
             $('#rootwizard').find('.progress-bar').css({width:$percent+'%'});
+            if ($percent == 100){
+                $('#rootwizard').find('.progress-bar').css({background:'#208c09'});
+            } else {
+                $('#rootwizard').find('.progress-bar').css({background:'#5bc0de'});
+            }
         },
         'onNext': function(tab, navigation, index) {
             var $valid = $("#wizardForm").valid();
@@ -74,10 +56,5 @@ $(document).ready(function() {
                 return false;
             }
         },
-    });
-    
-    $('.date-picker').datepicker({
-        orientation: "top auto",
-        autoclose: true
     });
 });
