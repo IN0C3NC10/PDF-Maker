@@ -8,7 +8,7 @@
 <!-- Título&Descrição -->
 <h2 align="left" id="descricao">Descrição</h2>
 <p align="justify">
-  Este é um website simples, feito com fins de estudo e aprendizado em API, Vue.js e Node.js, cadastra tarefas, as lista com filtros, destaca as atrasadas e tudo isso gerenciado por meio do Mac Address informado.
+  Este é um website simples, feito com fins de estudo e aprendizado em geração de arquivos PDFs utilizando o PHP e algumas funções, como também exercitar um pouco dos conhecimentos em JavaScript (JQuery).
 </p>
 
 
