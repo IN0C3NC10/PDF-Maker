@@ -2,7 +2,7 @@
 $config = parse_ini_file("../config.ini");
 require_once('../TCPDF/tcpdf_include.php');
 
-/*
+/* * GERA O ARQUIVO PDF
 * @param String $firstName, Primeiro nome do usuário
 * @param String $lastName, Sobrenome do usuário
 * @param String $email, Email de contato
@@ -61,5 +61,33 @@ function buildPDF($firstName, $lastName, $email, $profile, $company, $startCompa
     // define a última página juntamente ao nome do arquivo
     $pdf->lastPage();
     $pdf->Output('PDF_MAKER-'.$firstName.'_'.$lastName.'.pdf', 'I');
+}
+
+/* * REMOVE OS CARACTERES DE UMA PALAVRA
+* @param String $text, Palavra que será tratada os caracteres especiais
+* @return String, Palavra tratada sem acentuação
+*/
+function cleanString($text) {
+    $utf8 = array(
+        '/[áàâãªä]/u'   =>   'a',
+        '/[ÁÀÂÃÄ]/u'    =>   'A',
+        '/[ÍÌÎÏ]/u'     =>   'I',
+        '/[íìîï]/u'     =>   'i',
+        '/[éèêë]/u'     =>   'e',
+        '/[ÉÈÊË]/u'     =>   'E',
+        '/[óòôõºö]/u'   =>   'o',
+        '/[ÓÒÔÕÖ]/u'    =>   'O',
+        '/[úùûü]/u'     =>   'u',
+        '/[ÚÙÛÜ]/u'     =>   'U',
+        '/ç/'           =>   'c',
+        '/Ç/'           =>   'C',
+        '/ñ/'           =>   'n',
+        '/Ñ/'           =>   'N',
+        '/–/'           =>   '-',
+        '/[’‘‹›‚]/u'    =>   ' ',
+        '/[“”«»„]/u'    =>   ' ',
+        '/ /'           =>   ' ',
+    );
+    return preg_replace(array_keys($utf8), array_values($utf8), $text);
 }
 ?>

@@ -33,7 +33,7 @@ $config = parse_ini_file("config.ini");
     <!-- Page Inner -->
     <div class="page-inner">
         <div class="page-title">
-            <h3 class="breadcrumb-header"><image src="/assets/images/pdf_logo.png" width="40" /> <?= $config['SITE_AUTHOR'] ?></h3>
+            <h3 class="breadcrumb-header"><image src="/assets/images/pdf_logo.png" width="40" /> <?= $config['SITE_NAME'] ?></h3>
         </div>
         <div id="main-wrapper">
             <div class="row">
