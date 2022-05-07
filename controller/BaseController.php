@@ -2,7 +2,7 @@
 $config = parse_ini_file("../config.ini");
 require_once('../TCPDF/tcpdf_include.php');
 
-/* * GERA O ARQUIVO PDF
+/** GERA O ARQUIVO PDF
 * @param String $firstName, Primeiro nome do usuário
 * @param String $lastName, Sobrenome do usuário
 * @param String $email, Email de contato
@@ -11,7 +11,7 @@ require_once('../TCPDF/tcpdf_include.php');
 * @param String $startCompany, Data em que iniciou suas atividades
 * @param String $endCompany, Data em que encerrou suas atividades
 * @return Document, Download do documento em formato PDF
-*/
+**/
 function buildPDF($firstName, $lastName, $email, $profile, $company, $startCompany, $endCompany){
     global $config;
     // cria uma nova instância da biblioteca com suas configurações iniciais
@@ -63,10 +63,10 @@ function buildPDF($firstName, $lastName, $email, $profile, $company, $startCompa
     $pdf->Output('PDF_MAKER-'.$firstName.'_'.$lastName.'.pdf', 'I');
 }
 
-/* * REMOVE OS CARACTERES DE UMA PALAVRA
-* @param String $text, Palavra que será tratada os caracteres especiais
-* @return String, Palavra tratada sem acentuação
-*/
+/** REMOVE OS CARACTERES DE UMA PALAVRA
+* @param String $text * Palavra que será tratada os caracteres especiais
+* @return String Palavra tratada sem acentuação
+**/
 function cleanString($text) {
     $utf8 = array(
         '/[áàâãªä]/u'   =>   'a',

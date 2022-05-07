@@ -31,6 +31,7 @@ $(document).ready(function () {
 
     $('#rootwizard').bootstrapWizard({
         'tabClass': 'nav nav-tabs',
+        // verica a aba em que esta e atribui a porcentagem e define as cores da barra de progresso
         onTabShow: function (tab, navigation, index) {
             var $total = (navigation.find('li').length) - 1;
             var $current = index;
@@ -58,6 +59,7 @@ $(document).ready(function () {
         }
     });
 
+    // impede do formulário ser enviado ao pressionar "Enter"
     $(document).keypress(function(e) {
         if(e.which == 13) {
             e.preventDefault();

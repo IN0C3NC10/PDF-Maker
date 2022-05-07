@@ -25,8 +25,8 @@ $config = parse_ini_file("config.ini");
     <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
 
     <!-- Theme Styles -->
-    <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/ecaps.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
 </head>
 
 <body>

@@ -1,0 +1,48 @@
+:root{
+    --light: #fff;
+    --dark: #000;
+    --one: #DC4955;
+}
+
+body {
+    background-color: #3d464c;
+}
+
+.breadcrumb-header{
+    color: transparent;
+    background: #666666;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+}
+
+.btn-default {
+    border-color: #3d464c;
+    color: #3d464c;
+}
+
+.pager li > a, .pager li > span {
+    background-color: #fff;
+    border: 1px solid #3d464c;
+    border-top-color: #3d464c;
+    border-right-color: #3d464c;
+    border-bottom-color: #3d464c;
+    border-left-color: #3d464c;
+}
+
+.pager .disabled > a, .pager .disabled > a:focus, .pager .disabled > a:hover, .pager .disabled > span{
+    border: 1px solid #3d464c;
+    border-top-color: #3d464c;
+    border-right-color: #3d464c;
+    border-bottom-color: #3d464c;
+    border-left-color: #3d464c;
+    color: #3d464c;
+}
+
+.btn-default.active.focus, .btn-default.active:focus, .btn-default.active:hover, .btn-default.focus, .btn-default:active.focus, .btn-default:active:focus, .btn-default:active:hover, .btn-default:focus, .btn-default:hover, .open > .dropdown-toggle.btn-default.focus, .open > .dropdown-toggle.btn-default:focus, .open > .dropdown-toggle.btn-default:hover {
+    border-color: var(--one) !important;
+    background-color: rgba(0,112,224,.08);
+    color: var(--one);
+}
