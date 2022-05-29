@@ -34,10 +34,11 @@ function update_ini_file($params, $filePath) {
         return false;
     }
     // finalmente atribui o novo conteúdo e exibi o status da operação
+    echo '<title>Contruindo arquivo de configuração</title><style>.center{text-align:center;}.marginT{margin-top:50px;}.link{text-decoration:none;color:inherit}.link:hover{color:#DC4955}</style>';
     if (fwrite($handle, $content)){
-        echo '<h4 style="text-align:center;margin-top:50px">O arquivo "<i>'.$filePath.'</i>" foi configurado com sucesso!</h4>'; 
+        echo '<h4 class="center marginT">O arquivo "<i>'.$filePath.'</i>" foi configurado com sucesso!</h4><h4 class="center"><a class="link" href="./">Página Inicial</a></h4>'; 
     } else {
-        echo '<h4 style="text-align:center;margin-top:50px">Houve um erro ao configurar "<i>'.$filePath.'</i>"!<br>Tente executar a rotina novamente!</h4>'; 
+        echo '<h4 class="center marginT">Houve um erro ao configurar "<i>'.$filePath.'</i>"!<br>Tente executar a rotina novamente <a class="link" href="./build_ini_file.php">aqui</a>!</h4>'; 
     }
     fclose($handle);
 }

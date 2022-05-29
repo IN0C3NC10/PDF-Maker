@@ -46,3 +46,11 @@ body {
     background-color: rgba(0,112,224,.08);
     color: var(--one);
 }
+
+.main{
+    color: var(--one);
+}
+
+.mainHover:hover{
+    color: var(--one);
+}
