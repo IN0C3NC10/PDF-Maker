@@ -1,6 +1,6 @@
 <?php
 $config = parse_ini_file("../config.ini");
-require_once('../TCPDF/tcpdf_include.php');
+require_once('../assets/plugins/TCPDF/tcpdf_include.php');
 
 /** GERA O ARQUIVO PDF
 * @param String $firstName, Primeiro nome do usuário
@@ -53,7 +53,7 @@ function buildPDF($firstName, $lastName, $email, $profile, $company, $startCompa
             <p>
                 <h4>Formação Profissional</h4><br>
                 Nome da empresa: '.$company.'<br>
-                Início: '.$startCompany.' | Saída: '.$endCompany.'<br>
+                Início: '.date('d/m/Y',  strtotime($startCompany)).' | Saída: '.date('d/m/Y',  strtotime($endCompany)).'<br>
             </p>';
     
     $pdf->writeHTML($html, true, false, true, false, '');
@@ -90,4 +90,3 @@ function cleanString($text) {
     );
     return preg_replace(array_keys($utf8), array_values($utf8), $text);
 }
-?>
